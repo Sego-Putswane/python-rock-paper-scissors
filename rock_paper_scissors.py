@@ -19,7 +19,7 @@ def game_logic(player_choice, computer_choice):
     (player_choice == "scissors" and computer_choice == "paper") or\
     (player_choice == "paper" and computer_choice == "rock"):
         return f"{player_name} wins this round!"
-    return f"Computer wins this round! "
+    return f"Computer wins this round!"
 
 def game_initialization():
     game_options = ["rock","paper","scissors"]
@@ -33,7 +33,9 @@ def game_initialization():
             print("\nGame Options:")
             for j,option in enumerate(game_options):
                 print(f"{j+1}.{option}")
-            player_choice = int()
+            player_choice = int(input("Enter you choice (1,2, or 3): "))
+            if  3<player_choice < 1:
+                raise ValueError
         except: pass
 
     # try:
