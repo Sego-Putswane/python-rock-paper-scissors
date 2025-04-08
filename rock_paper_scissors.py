@@ -36,20 +36,15 @@ def game_initialization():
             player_choice = int(input("Enter you choice (1,2, or 3): "))
             if  3<player_choice < 1:
                 raise ValueError
+            
             player_choice = game_options[player_choice - 1]
             computer_choice = random.choice(game_options)
             print(f"\nPlayer chose: {player_choice}")
             print(f"Computer chose: {computer_choice}")
+            
+            result = game_logic(player_choice,computer_choice)
+            print(result)
         except: pass
-
-    # try:
-    #     while True:
-    #         player_choice = input("Please choose either rock, paper, or scissors: ").lower() #asking player to make a selection.
-    #         if player_choice in game_options: #the condition that will apply if the player makes the correct selection.
-    #             print(f"{player_name} chose {player_choice}, and computer chose {computer_choice}.")
-    #             break
-    # except ValueError: #when the players selection is invalid
-    #     print("Invalid input. Please try again.")
 
 if __name__ == "__main__":
     get_player_name()
