@@ -26,7 +26,7 @@ def game_initialization():
     rounds = 3
     player_score = 0
     computer_score = 0
-    computer_choice = random.choice(game_options) #this is how the computer will be able to make a selection.
+     #this is how the computer will be able to make a selection.
 
     for i in range(rounds):
         try:
@@ -36,6 +36,10 @@ def game_initialization():
             player_choice = int(input("Enter you choice (1,2, or 3): "))
             if  3<player_choice < 1:
                 raise ValueError
+            player_choice = game_options[player_choice - 1]
+            computer_choice = random.choice(game_options)
+            print(f"\nPlayer chose: {player_choice}")
+            print(f"Computer chose: {computer_choice}")
         except: pass
 
     # try:
