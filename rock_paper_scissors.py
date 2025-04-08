@@ -19,7 +19,7 @@ def game_logic(player_choice, computer_choice):
     (player_choice == "scissors" and computer_choice == "paper") or\
     (player_choice == "paper" and computer_choice == "rock"):
         return f"{player_name} wins this round!"
-    return f"Computer wins this round!"
+    return f"Computer wins this round! "
 
 def game_initialization():
     game_options = ["rock","paper","scissors"]
